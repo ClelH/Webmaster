@@ -1,0 +1,282 @@
+:root {
+    --red: #03f9178d;
+    --black: #000;
+    --white: #fff;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin:0 ;
+        padding: 0 ;
+        font-family: 'Poppins', sans-serif;
+        }
+        
+        .top_c {
+           position: absolute;
+           transform: translateY(-40px);
+           width: auto;
+           height: 100%;
+           left: 1%;
+           padding-bottom: 15px;
+        }
+        
+        body {
+            background-color: #161816;
+            min-height: 100vh;
+            overflow-x: hidden;
+            
+        }
+        
+        .navbar {
+         background: var(--black);
+         height: 90px;
+         padding: 0.5rem calc((100vw - 1200px)/ 2);
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         position: relative;
+         z-index: 2;
+        }
+        
+        .navbar_logo {
+        color: var(--white);
+        text-decoration: none;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        }
+        
+        .navbar_link {
+        color: var(--white);
+        text-decoration: none;
+        padding: 0rem 1rem; 
+        }
+        
+        .navbar_link:hover {
+        color: var(--red);
+        }
+        
+        @media screen and (max-width: 768px) {
+            body.active {
+               overflow-y: hidden; 
+               overflow-x: hidden;
+            }
+             .navbar_link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+             }
+        
+             .navbar_menu {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, 100px);
+                position: absolute;
+                width: 100%;
+                top:-1000px;
+             }
+        
+             .navbar_menu.active {
+               top: 100%;
+               opacity: 1;
+               z-index: 99;
+               height: 100vh;
+               font-size: 1.5rem;
+               background: var(--black);
+             }
+        
+            .navbar_toggle .bar {
+                width: 25px;
+                height: 3px;
+                margin: 5px auto;
+                transition: all 0.3s ease-in-out;
+                background: var(--white);
+                display: block;
+                cursor: pointer;
+            }
+        
+            #mobile-menu {
+                position: absolute;
+                top: 15%;
+                right: 5%;
+                transform: translate(5%, 20%);
+            }
+        
+            #mobile-menu.is-active .bar:nth-child(2) {
+                opacity: 0;
+            }
+        
+            #mobile-menu.is-active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+        
+            #mobile-menu.is-active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+        }
+        
+        }
+
+        a:hover {
+            color: #000;
+        }
+        
+        body {
+            font-family: Helvetica;
+            color:#fff;
+            background-color: #161816;
+            font-size: smaller;
+        }
+        
+        header {
+            text-align: center;
+            margin: 10px 0px;
+        }
+        
+        header h1 {
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .component {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 150px;
+        }
+        
+        .component h2 {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        /* Bento Menu */
+
+.component {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+#bentoMenu {
+    margin-top: 50px;
+    padding: 8px 8px;
+    display: grid;
+    grid-gap: 8px;
+    width: clamp(619px, 100vw, 800px);
+    height: 500px;
+}
+
+.bentoMenu-container {
+ position: relative;
+}
+
+
+.store{
+    font-size: 100%;
+    display: none;
+    color: var(--white);
+    font-style: bold;
+    text-decoration: none;
+ }
+
+
+#bentoMenu-anchor:hover .store {
+   display: block;
+   color: var(--white);
+   font-family: Anta;
+   text-align: center;
+}
+
+#bentoMenu_1:hover {
+background-image: url(/images/back.png);
+}
+
+#bentoMenu_3:hover {
+    background-image: url(/images/back.png);
+    }
+
+#bentoMenu_5:hover {
+background-image: url(/images/back.png);
+}
+
+#bentoMenu_4:hover {
+    background-image: url(/images/back.png);
+    }
+
+#bentoMenu_6:hover {
+    background-image: url(/images/back.png);
+    }
+                
+
+
+
+#bentoMenu_1, #bentoMenu_2, #bentoMenu_3, #bentoMenu_4, #bentoMenu_5, #bentoMenu_6 {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#bentoMenu_1{
+    background-image: url('./images/boxp.png');
+    background-size: cover;
+    background-color: #4d8f14;
+    background-position: center;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#bentoMenu_2 {
+    background-image: url('./images/box5.png');
+    background-size: cover;
+    background-color: #4d8f14;
+    background-position: center;
+    color: #fff;
+    grid-column: 2/4;
+    grid-row: 2;
+}
+
+#bentoMenu_3{
+    background-image: url('./images/boxw.png');
+    background-size: cover;
+    background-color: #4d8f14;
+    background-position: center;
+    grid-column: 1;
+    grid-row: 2/4;
+}
+
+#bentoMenu_4{
+    background-image: url('./images/boxs.png');
+    background-size: cover;
+    background-color: #4d8f14;
+    background-position: center;
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+#bentoMenu_5{
+    background-image: url('./images/boxwt.png');
+    background-size: cover;
+    background-color: #4d8f14;
+    background-position: center;
+    grid-column: 3/5;
+    grid-row: 3/4;
+}
+
+
+
+#bentoMenu_6{
+    background-image: url('./images/boxl.png');
+    background-size: cover;
+    background-color: #4d8f14;
+    background-position: center;
+    grid-column: 4/5;
+    grid-row: 1/3;
+    
+}
+
+
+

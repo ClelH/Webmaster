@@ -1,0 +1,204 @@
+:root {
+    --red: #03f9178d;
+    --black: #000;
+    --white: #fff;
+    }
+
+    *{
+        box-sizing: border-box;
+        margin:0 ;
+        padding: 0 ;
+        font-family: 'Poppins', sans-serif;
+        }
+        
+        .top_c {
+           position: absolute;
+           transform: translateY(-40px);
+           width: auto;
+           height: 100%;
+           left: 1%;
+           padding-bottom: 15px;
+        }
+        
+        body {
+            background-color: #161816;
+            min-height: 100vh;
+            overflow-x: hidden;
+            
+        }
+        
+        .navbar {
+         background: var(--black);
+         height: 90px;
+         padding: 0.5rem calc((100vw - 1200px)/ 2);
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         position: relative;
+         z-index: 2;
+        }
+        
+        .navbar_logo {
+        color: var(--white);
+        text-decoration: none;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        }
+        
+        .navbar_link {
+        color: var(--white);
+        text-decoration: none;
+        padding: 0rem 1rem; 
+        }
+        
+        .navbar_link:hover {
+        color: var(--red);
+        }
+        
+        @media screen and (max-width: 768px) {
+            body.active {
+               overflow-y: hidden; 
+               overflow-x: hidden;
+            }
+             .navbar_link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+             }
+        
+             .navbar_menu {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, 100px);
+                position: absolute;
+                width: 100%;
+                top:-1000px;
+             }
+        
+             .navbar_menu.active {
+               top: 100%;
+               opacity: 1;
+               z-index: 99;
+               height: 100vh;
+               font-size: 1.5rem;
+               background: var(--black);
+             }
+        
+            .navbar_toggle .bar {
+                width: 25px;
+                height: 3px;
+                margin: 5px auto;
+                transition: all 0.3s ease-in-out;
+                background: var(--white);
+                display: block;
+                cursor: pointer;
+            }
+        
+            #mobile-menu {
+                position: absolute;
+                top: 15%;
+                right: 5%;
+                transform: translate(5%, 20%);
+            }
+        
+            #mobile-menu.is-active .bar:nth-child(2) {
+                opacity: 0;
+            }
+        
+            #mobile-menu.is-active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+        
+            #mobile-menu.is-active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+        }
+        
+        }
+
+a {
+    text-decoration: none;
+    color: #0d8317;
+}
+
+a:hover {
+    color: #000;
+}
+
+body {
+    font-family: Helvetica;
+    color:#03f9178d;
+    background-color: #161816;
+}
+
+header {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+header h1 {
+    font-weight: bold;
+    color: #fff;
+}
+
+.component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.component h2 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+button {
+    display: inline-block ;   
+    background-color: var(--red) ;
+    margin-top: 10px;
+    padding: 20px;
+    width: 500px;
+    color: var(--white);
+    text-align: center;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 5px;
+    border-color: #fff;
+   }
+   
+   button:hover {
+       background-color: transparent
+   }
+
+   .button1 {
+    margin-top: 10px;
+    
+
+
+   }
+
+   .button1 h1 {
+    margin-top: 30px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    color: #fff;
+   }
+
+   .button1 p {
+    margin-top: 10px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    color: #fff;
+   }
+
+   .stats_container{
+    display: grid;
+   }
+
+   .hos_1 {
+    position: absolute;
+    
+    max-width: 100%;
+   }
